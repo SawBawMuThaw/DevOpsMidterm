@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Environment (keep .env.example if you add one)
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+.env.test
+
+# Build output
+build/
+dist/
+out/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Uploads (user-uploaded files)
+public/uploads/
+uploads/
+
+# Secrets and sensitive files
+secrets/
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*
+*credentials*
