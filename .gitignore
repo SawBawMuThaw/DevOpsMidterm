@@ -31,3 +31,6 @@ secrets/
 *.pfx
 credentials*
 *credentials*
+
+# .env file in phase 3
+phase3/node/app/.env
