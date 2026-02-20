@@ -23,6 +23,7 @@ services:
       - MONGO_INITDB_DATABASE=products_db
     volumes:
       - mongo_data:/data/db
+      - ./dump:/dump
     networks:
       - app_network
 
