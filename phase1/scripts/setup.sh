@@ -172,7 +172,7 @@ if [[ -d "${APP_SOURCE_DIR}" ]]; then
   mkdir -p "${APP_SOURCE_DIR}/public/uploads"
   mkdir -p "${APP_SOURCE_DIR}/logs"
   mkdir -p "${APP_SOURCE_DIR}/data"
-  chown ubuntu:ubuntu "${APP_SOURCE_DIR}/public/uploads"
+  chown "${SUDO_USER}:${SUDO_USER}" "${APP_SOURCE_DIR}/public/uploads"
   log_info "Created directories: public/uploads, logs, data"
 else
   log_warn "APP_SOURCE_DIR ${APP_SOURCE_DIR} does not exist yet"
