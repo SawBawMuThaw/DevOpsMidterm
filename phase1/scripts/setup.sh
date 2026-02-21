@@ -6,7 +6,7 @@ set -o pipefail
 # Installs all dependencies and libraries needed for the Node.js application.
 
 STEP=0
-TOTAL_STEPS=10
+TOTAL_STEPS=9
 log_step() {
   STEP=$((STEP + 1))
   echo "[${STEP}/${TOTAL_STEPS}] $1"

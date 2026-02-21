@@ -99,17 +99,19 @@ log_step "Deploying application with Docker Compose"
 # Resolve the directory containing this script
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# Look for docker-compose.yml in the same directory as this script
-COMPOSE_FILE="${SCRIPT_DIR}/../docker-compose.yml"
+# docker-compose.yml lives one level up from the scripts/ folder
+COMPOSE_DIR="$(cd "${SCRIPT_DIR}/.." && pwd)"
+COMPOSE_FILE="${COMPOSE_DIR}/docker-compose.yml"
 
 if [[ ! -f "${COMPOSE_FILE}" ]]; then
   log_error "docker-compose.yml not found at ${COMPOSE_FILE}"
-  log_error "Please place docker-compose.yml in the same directory as this script."
+  log_error "Make sure you run this script from the repo root:"
+  log_error "  sudo bash ./phase3/scripts/setup-docker.sh"
   exit 1
 fi
 
 log_info "Found docker-compose.yml at ${COMPOSE_FILE}"
-cd "${SCRIPT_DIR}/.."
+cd "${COMPOSE_DIR}"
 
 # Pull latest images and start containers
 docker compose pull

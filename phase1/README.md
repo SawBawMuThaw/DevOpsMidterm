@@ -87,4 +87,3 @@ Note: The UI on the homepage uses fetch + FormData to send files, so you don't n
 - Or migrating image storage to S3/Cloudinary (requires credentials).
 - Adding product detail pages or pagination for the list.
 
-If you want me to update the README to clearly document how to migrate data, how to reset uploads, or provide more specific examples, let me know your specific requirements and I'll add them.
