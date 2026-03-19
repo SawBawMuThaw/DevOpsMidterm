@@ -37,14 +37,17 @@ Copy and run the command given by startup.
 ```
 $ pm2 save
 ```
-6. Run the following commands to set up nginx reverse proxy and https.
+
+6. Create DNS records. If you are using AWS, associate elastic IP with your instance and use this IPv4 address to create 2 DNS A records for aqiu.click and www.aqiu.click respectively.
+
+7. Run the following commands to set up nginx reverse proxy and https.
 ```
 $ sudo cp ./phase2/scripts/nginx.conf /etc/nginx/nginx.conf
 $ sudo certbot --nginx
 ```
 Choose all domains.
 
-7. Create DNS records. If you are using AWS, associate elastic IP with your instance and use this IPv4 address to create 2 DNS A records for aqiu.click and www.aqiu.click respectively.
+
 
 **You are now done with the traditional deployment**
 
